@@ -26,18 +26,18 @@ class LoginController: UIViewController {
     private lazy var username: UITextField = {
         let username = UITextField()
         username.attributedText = NSAttributedString.init(string: "Username")
-        username.backgroundColor = .systemPurple
+        username.backgroundColor = UIColor.fromRGBString("#F39FE4")
         username.borderStyle = .line
-        username.textColor = .white
+        username.textColor = UIColor.fromRGBString("#406AC6")
         return username
     }()
     
     private lazy var password: UITextField = {
         let password = UITextField()
         password.attributedText = NSAttributedString.init(string: "Password")
-        password.backgroundColor = .systemPurple
+        password.backgroundColor = UIColor.fromRGBString("#F39FE4")
         password.borderStyle = .line
-        password.textColor = .white
+        password.textColor = UIColor.fromRGBString("#406AC6")
         return password
     }()
     
@@ -45,10 +45,10 @@ class LoginController: UIViewController {
         let button = UIButton()
         button.tintColor = .systemPurple
         button.setTitle("Enter", for: .normal)
-        button.backgroundColor = .clear
+        button.backgroundColor = UIColor.fromRGBString("#D3BAEC")
         button.layer.cornerRadius = 10
-        button.layer.borderWidth = 2
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.fromRGBString("#D3BAEC").cgColor
         button.addTarget(self, action: #selector(login), for: .touchUpInside)
         return button
     }()
@@ -61,10 +61,10 @@ class LoginController: UIViewController {
     
     func setupView() {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-        backgroundImage.addSubview(username)
-        backgroundImage.addSubview(password)
-        backgroundImage.addSubview(button)
         view.addSubview(backgroundImage)
+        view.addSubview(username)
+        view.addSubview(password)
+        view.addSubview(button)
         
         backgroundImage.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
@@ -72,20 +72,20 @@ class LoginController: UIViewController {
         }
         
         username.snp.makeConstraints { make in
-            make.centerX.equalTo(backgroundImage)
-            make.centerY.equalTo(backgroundImage)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
             make.width.equalTo(200)
         }
         
         password.snp.makeConstraints { make in
-            make.centerX.equalTo(backgroundImage)
-            make.centerY.equalTo(backgroundImage).offset(40)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(40)
             make.width.equalTo(200)
         }
         
         button.snp.makeConstraints { make in
-            make.centerX.equalTo(backgroundImage)
-            make.centerY.equalTo(backgroundImage).offset(90)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(90)
             make.width.equalTo(90)
         }
     }

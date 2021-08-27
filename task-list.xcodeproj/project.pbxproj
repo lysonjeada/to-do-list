@@ -17,6 +17,8 @@
 		70318CD226D343E4005FB1BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70318CD126D343E4005FB1BF /* LoginView.swift */; };
 		7053067426D5C00F00991E6C /* ToDoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053067326D5C00F00991E6C /* ToDoController.swift */; };
 		7053067E26D6CFB400991E6C /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053067D26D6CFB400991E6C /* Utilities.swift */; };
+		7053068026D700F400991E6C /* FinishedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7053067F26D700F400991E6C /* FinishedController.swift */; };
+		70E01A2626D9896900BBD989 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E01A2526D9896800BBD989 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		70318CD126D343E4005FB1BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7053067326D5C00F00991E6C /* ToDoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoController.swift; sourceTree = "<group>"; };
 		7053067D26D6CFB400991E6C /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7053067F26D700F400991E6C /* FinishedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedController.swift; sourceTree = "<group>"; };
+		70E01A2526D9896800BBD989 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		873A4FD4E6D5727CE01160BC /* libPods-task-list.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-task-list.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9841D589243D49B2182D1EBF /* Pods-task-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-task-list.release.xcconfig"; path = "Target Support Files/Pods-task-list/Pods-task-list.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,11 +73,11 @@
 		700E056C26CDEE7700C67486 /* task-list */ = {
 			isa = PBXGroup;
 			children = (
+				7053068126D7196E00991E6C /* Controller */,
 				700E058426CDF1FB00C67486 /* Extension */,
 				700E056D26CDEE7700C67486 /* AppDelegate.swift */,
+				70E01A2526D9896800BBD989 /* Task.swift */,
 				700E056F26CDEE7700C67486 /* SceneDelegate.swift */,
-				700E057126CDEE7700C67486 /* LoginController.swift */,
-				7053067326D5C00F00991E6C /* ToDoController.swift */,
 				70318CD126D343E4005FB1BF /* LoginView.swift */,
 				700E057626CDEE7A00C67486 /* Assets.xcassets */,
 				700E057826CDEE7A00C67486 /* LaunchScreen.storyboard */,
@@ -89,6 +93,16 @@
 				700E058526CDF20E00C67486 /* UIView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		7053068126D7196E00991E6C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				700E057126CDEE7700C67486 /* LoginController.swift */,
+				7053067326D5C00F00991E6C /* ToDoController.swift */,
+				7053067F26D700F400991E6C /* FinishedController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		A4C94C14F2E72CE224F9A8E0 /* Frameworks */ = {
@@ -204,11 +218,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				700E058626CDF20E00C67486 /* UIView.swift in Sources */,
+				7053068026D700F400991E6C /* FinishedController.swift in Sources */,
 				700E057226CDEE7700C67486 /* LoginController.swift in Sources */,
 				7053067E26D6CFB400991E6C /* Utilities.swift in Sources */,
 				700E056E26CDEE7700C67486 /* AppDelegate.swift in Sources */,
 				70318CD226D343E4005FB1BF /* LoginView.swift in Sources */,
 				700E057026CDEE7700C67486 /* SceneDelegate.swift in Sources */,
+				70E01A2626D9896900BBD989 /* Task.swift in Sources */,
 				7053067426D5C00F00991E6C /* ToDoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

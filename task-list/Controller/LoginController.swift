@@ -28,7 +28,7 @@ class LoginController: UIViewController {
         username.attributedText = NSAttributedString.init(string: "Username")
         username.backgroundColor = UIColor.fromRGBString("#F39FE4")
         username.borderStyle = .line
-        username.textColor = UIColor.fromRGBString("#406AC6")
+        username.textColor = UIColor.black
         return username
     }()
     
@@ -37,7 +37,7 @@ class LoginController: UIViewController {
         password.attributedText = NSAttributedString.init(string: "Password")
         password.backgroundColor = UIColor.fromRGBString("#F39FE4")
         password.borderStyle = .line
-        password.textColor = UIColor.fromRGBString("#406AC6")
+        password.textColor = UIColor.black
         return password
     }()
     
@@ -45,10 +45,12 @@ class LoginController: UIViewController {
         let button = UIButton()
         button.tintColor = .systemPurple
         button.setTitle("Enter", for: .normal)
+        button.setTitleColor(.black, for: .normal)
         button.backgroundColor = UIColor.fromRGBString("#D3BAEC")
         button.layer.cornerRadius = 10
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.fromRGBString("#D3BAEC").cgColor
+        button.dropShadow()
         button.addTarget(self, action: #selector(login), for: .touchUpInside)
         return button
     }()
